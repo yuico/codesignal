@@ -1,2 +1,2 @@
 ﻿# codesignal
-one day one coding
+one coding in a day
