@@ -17,5 +17,5 @@ function sumOfDivisors(n) {
     return sum;
 }
 
-console.log(sumOfDivisors(0));
+console.log(sumOfDivisors(12));
 
