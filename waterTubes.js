@@ -9,4 +9,4 @@ function waterTubes(water, flowPerMinute) {
 }
 console.log(waterTubes(water, flowPerMinute));
 let water = [1, 2, 5];
-let flowPerMinut = [1, 1, 2];
+let flowPerMinute = [1, 1, 2];
