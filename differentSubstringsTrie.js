@@ -5,7 +5,6 @@ function differentSubstringsTrie(inputString) {
             if(inputString.slice(i,j+1) != "")
             arr.push(inputString.slice(i, j+1));
         }
-        j = 0;
     }
     arr.sort();
     for(let k=0; k<arr.length; k++) {
