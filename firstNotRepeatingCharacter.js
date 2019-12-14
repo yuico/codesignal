@@ -1,23 +1,15 @@
 function firstNotRepeatingCharacter(s) {
-  let arr = s.split('').sort();
-  let tem = arr[0];
-  if (arr[0] != arr[1]) {
-    return tem;
-  } else {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] != arr[i + 1] && arr[i + 1] != arr[i + 2]) {
-        tem = arr[i + 1];
+  num=0;
+  for(i=0; i<s.length; i++) {
+    for(j=0; j<s.length; j++){
+      if (s.charAt(i) == s.charAt(j)) {
+        num++;
+        if(num > 2) break;
       }
-    } 
-    // if (arr[arr.lenght - 1] != arr[arr.lenght - 2]) {
-    //   tem = arr[arr.lenght - 1];
-    //   break;
-    // } else {
-    //   tem = '_';
-    //   break;
-    // }
-  }
+    }if(num < 2) {
+      return s.charAt(i);
+    } num=0;
+  }return "_"
 }
 
-let s = "abacabad";
-console.log(firstNotRepeatingCharacter(s));
+console.log(firstNotRepeatingCharacter("abacabad"));
