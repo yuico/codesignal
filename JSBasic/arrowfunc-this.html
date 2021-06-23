@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">btn</button>
+    <button id="btn1">btn1</button>
+    <button id="btn2">btn2</button>
+    <button id="btn3">btn3</button>
+  </body>
+
+  <script>
+    const btn = document.getElementById('btn');
+    var myObj = {
+      count: 0,
+      setCounter: function () {
+        console.log(this.count);
+        btn.addEventListener('click', function () {
+          console.log(this); //btn itself
+        });
+        btn1.addEventListener('click', () => {
+          console.log(this); //look at upper scope
+        });
+        btn2.addEventListener(
+          'click',
+          function () {
+            console.log(this); //look at upper scope
+          }.bind(this)
+        );
+        btn3.addEventListener('click', () => {
+          console.log(this.count++); //can update count
+        });
+      },
+    };
+
+    myObj.setCounter(); //myObj's this
+  </script>
+</html>

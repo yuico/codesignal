@@ -33,25 +33,26 @@ console.log(myDupArr4)
 // console.log('called fun 2')
 // console.log('called fun 3')
 
-
 // called fun 1
 // called fun 2
 // called fun 3
 
 //answer1
 function func2() {
-  console.log('fun2')
+  console.log('fun2');
 }
 
 async function fun1() {
   console.log('fun1');
   const result = await func2();
-  console.log(result);
+  console.log('result');
 }
 
 fun1();
 
 //answer2
-for(let i=0; i<5; i++){
-  setTimeout(function() {console.log(i+1)}, 1000*i)
+for (let i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i + 1);
+  }, 1000 * i);
 }
