@@ -38,5 +38,37 @@
     };
 
     myObj.setCounter(); //myObj's this
+
+    const MyClass = function () {};
+    new MyClass();
+
+    const MyClass1 = () => {};
+    //new MyClass1(); //generate error: MyClass1 is not a constructor
+    // no prototype as well
+
+    /*arguments*/
+    const normalFunc = function () {
+      console.log(arguments);
+    };
+    normalFunc(1, 2, 3, 4);
+
+    const arrowFunc1 = () => {
+      //console.log(arguments); //generate error: arguments is not defined
+    };
+    arrowFunc1(1, 2, 3, 4);
+
+    function outer() {
+      const arrowFunc2 = () => {
+        console.log(arguments); // look at outer's arguments
+      };
+      arrowFunc2();
+    }
+    outer(1, 2, 3, 4);
+
+    //using (...args) : will get the informations by array
+    const arrowFunc3 = (...args) => {
+      console.log(args);
+    };
+    arrowFunc3('a', 'b', 'c');
   </script>
 </html>
