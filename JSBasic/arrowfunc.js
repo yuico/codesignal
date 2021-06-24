@@ -6,8 +6,8 @@ const arrowFunc = () => {};
 const btn = document.getElementById('btn');
 var myObj = {
   count: 3,
-  setCounter: () => {
-    console.log(count);
+  setCounter: function () {
+    console.log(this.count);
   },
 };
 //여기서 this는 myObj의 this

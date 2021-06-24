@@ -8,7 +8,7 @@ function yo() {
   }, 1500);
 
   for (let i = 0; i < 3; i++) {
-    doSomething(); //가정: 1초가 걸리는 일
+    doSomething(); //suppose: it is task which needs 1s to be done.
     console.log(i);
   }
   console.log('end the 3s timer');
@@ -29,6 +29,7 @@ end the 3s timer
 main end
 end the 1.5s timer
 
+'Timer' exits outside, provided by browser through web api.
 'Callstack' is only one,
 In JS, the timer will wait till the all waiting list
 is done in the 'queue'.
